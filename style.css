@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Kaushan+Script&family=Patrick+Hand+SC&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-theme-clr: rgb(188, 31, 241);
+  --main-font: 'Patrick Hand SC', cursive;
+}
+
+body {
+  background-color: #f2f2f2;
+  text-align: center;
+  background-color: black;
+}
+
+.header h1 {
+  font-family: "Bungee Shade", sans-serif;
+  color: var(--main-theme-clr);
+  font-size: 2.5rem;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__image {
+  width: 200px;
+  height: auto;
+  animation: hoverAnimation 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes hoverAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+.main {
+  padding: 20px;
+}
+
+.main__intro {
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: var(--main-font);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.main__search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.search-bar__input {
+  padding: 10px;
+  width: 300px;
+  text-align: center;
+  border-radius: 25px;
+  border: 1px solid black;
+  font-family: var(--main-font);
+  font-size: 1.25rem;
+}
+
+.search-bar__input:hover {
+  letter-spacing: .20px;
+}
+
+.search-bar__button {
+  margin-top: 5px;
+  padding: 10px 40px;
+  background-color: var(--main-theme-clr);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: var(--main-font);
+  font-size: 1.25rem;
+}
+
+.search-bar__button:hover {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.footer h1 {
+  font-family: "Kaushan Script", cursive;
+  color: var(--main-theme-clr);
+}
